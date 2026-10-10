@@ -1,0 +1,6 @@
+FROM python:3.11-slim
+
+# Deliberately small runtime image: no compiler toolchain and no extra
+# application packages. The sandbox process itself runs as an unprivileged UID.
+USER 65532:65532
+WORKDIR /workspace
